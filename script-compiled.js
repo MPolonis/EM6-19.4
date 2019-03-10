@@ -1,7 +1,7 @@
 'use strict';
 
 var sayHello = function sayHello() {
-  return alert('Hello world!');
+    return alert('Hello world!');
 };
 sayHello();
 
@@ -15,22 +15,25 @@ console.log(element1 + ', ' + element2);
 // Task 2
 
 var multiply = function multiply(a) {
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-  return a * b;
+    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    return a * b;
 };
 console.log(multiply(5, 5));
 
 // Task 3 
 
 var average = function average() {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+    }
 
-  return args.reduce(function (a, b) {
-    return a + b;
-  }) / args.length;
+    var sum = 0;
+    args.forEach(function (arg) {
+        sum += arg;
+    });
+    return sum / args.length;
 };
+
 console.log(average(1, 3));
 
 //Task 4
